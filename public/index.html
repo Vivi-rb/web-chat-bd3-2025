@@ -47,7 +47,7 @@
 
         function renderMessage(message) {
             $('.messages').append('<div class="message"><strong>' //.apend adiciona o conteúdo no final
-                + message.author + message.data_hora + '</strong>: ' + message.message + '</div>');
+                + message.usuario + message.dataHora + '</strong>: ' + message.mensagem + '</div>');
         }
 
         socket.on('previousMessage', function (messages) {
@@ -81,9 +81,9 @@
 
 
                 var messageObject = {
-                    author: author,
-                    data_hora: data_hora_msg,
-                    message: message,
+                    usuario: author,
+                    dataHora: data_hora_msg,
+                    mensagem: message,
                 };
 
                 renderMessage(messageObject);
